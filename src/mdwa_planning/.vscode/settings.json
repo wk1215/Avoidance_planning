@@ -1,0 +1,8 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/zch/planning_ros/devel/lib/python2.7/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/zch/planning_ros/devel/lib/python2.7/dist-packages"
+    ]
+}

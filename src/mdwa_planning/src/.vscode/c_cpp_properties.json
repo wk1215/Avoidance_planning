@@ -1,0 +1,35 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/zch/planning_ros/devel/include/**",
+        "/home/zch/catkin_ws/devel/include/**",
+        "/home/zch/ackmcar_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/zch/ackmcar_ws/src/racecar/system/racecar/ackermann_cmd_mux/include/**",
+        "/home/zch/ackmcar_ws/src/racecar/system/hokuyo_node/include/**",
+        "/home/zch/hybrid_a_star_ws/src/Hybrid_A_Star/include/**",
+        "/home/zch/catkin_ws/src/path_planner/include/**",
+        "/home/zch/catkin_ws/src/item/include/**",
+        "/home/zch/planning_ros/src/mdwa_planning/include/**",
+        "/home/zch/ackmcar_ws/src/racecar/racecar_gazebo/include/**",
+        "/home/zch/ackmcar_ws/src/racecar/system/serial/include/**",
+        "/home/zch/catkin_ws/src/teb_local_planner/include/**",
+        "/home/zch/catkin_ws/src/tianracer/tianracer_core/include/**",
+        "/home/zch/ackmcar_ws/src/racecar/system/vesc/vesc_ackermann/include/**",
+        "/home/zch/ackmcar_ws/src/racecar/system/vesc/vesc_driver/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
