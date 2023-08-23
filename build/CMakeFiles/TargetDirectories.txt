@@ -80,6 +80,7 @@
 /home/zch/planning_ros/build/mdwa_planning/CMakeFiles/mdwa_planning_genpy.dir
 /home/zch/planning_ros/build/mdwa_planning/CMakeFiles/airthread_field.dir
 /home/zch/planning_ros/build/mdwa_planning/CMakeFiles/avoid_planning.dir
+/home/zch/planning_ros/build/mdwa_planning/CMakeFiles/template_proj.dir
 /home/zch/planning_ros/build/mdwa_planning/CMakeFiles/test.dir
 /home/zch/planning_ros/build/mdwa_planning/CMakeFiles/edit_cache.dir
 /home/zch/planning_ros/build/mdwa_planning/CMakeFiles/rebuild_cache.dir

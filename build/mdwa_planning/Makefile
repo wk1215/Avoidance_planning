@@ -801,6 +801,20 @@ avoid_planning/fast:
 	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/avoid_planning.dir/build.make mdwa_planning/CMakeFiles/avoid_planning.dir/build
 .PHONY : avoid_planning/fast
 
+# Convenience name for target.
+mdwa_planning/CMakeFiles/template_proj.dir/rule:
+	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mdwa_planning/CMakeFiles/template_proj.dir/rule
+.PHONY : mdwa_planning/CMakeFiles/template_proj.dir/rule
+
+# Convenience name for target.
+template_proj: mdwa_planning/CMakeFiles/template_proj.dir/rule
+.PHONY : template_proj
+
+# fast build rule for target.
+template_proj/fast:
+	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/template_proj.dir/build.make mdwa_planning/CMakeFiles/template_proj.dir/build
+.PHONY : template_proj/fast
+
 src/airthread_field.o: src/airthread_field.cpp.o
 .PHONY : src/airthread_field.o
 
@@ -848,6 +862,78 @@ src/avoid_planning.s: src/avoid_planning.cpp.s
 src/avoid_planning.cpp.s:
 	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/avoid_planning.dir/build.make mdwa_planning/CMakeFiles/avoid_planning.dir/src/avoid_planning.cpp.s
 .PHONY : src/avoid_planning.cpp.s
+
+src/dwa.o: src/dwa.cpp.o
+.PHONY : src/dwa.o
+
+# target to build an object file
+src/dwa.cpp.o:
+	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/avoid_planning.dir/build.make mdwa_planning/CMakeFiles/avoid_planning.dir/src/dwa.cpp.o
+.PHONY : src/dwa.cpp.o
+
+src/dwa.i: src/dwa.cpp.i
+.PHONY : src/dwa.i
+
+# target to preprocess a source file
+src/dwa.cpp.i:
+	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/avoid_planning.dir/build.make mdwa_planning/CMakeFiles/avoid_planning.dir/src/dwa.cpp.i
+.PHONY : src/dwa.cpp.i
+
+src/dwa.s: src/dwa.cpp.s
+.PHONY : src/dwa.s
+
+# target to generate assembly for a file
+src/dwa.cpp.s:
+	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/avoid_planning.dir/build.make mdwa_planning/CMakeFiles/avoid_planning.dir/src/dwa.cpp.s
+.PHONY : src/dwa.cpp.s
+
+src/environment.o: src/environment.cpp.o
+.PHONY : src/environment.o
+
+# target to build an object file
+src/environment.cpp.o:
+	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/avoid_planning.dir/build.make mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.o
+.PHONY : src/environment.cpp.o
+
+src/environment.i: src/environment.cpp.i
+.PHONY : src/environment.i
+
+# target to preprocess a source file
+src/environment.cpp.i:
+	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/avoid_planning.dir/build.make mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.i
+.PHONY : src/environment.cpp.i
+
+src/environment.s: src/environment.cpp.s
+.PHONY : src/environment.s
+
+# target to generate assembly for a file
+src/environment.cpp.s:
+	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/avoid_planning.dir/build.make mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.s
+.PHONY : src/environment.cpp.s
+
+src/template_proj.o: src/template_proj.cpp.o
+.PHONY : src/template_proj.o
+
+# target to build an object file
+src/template_proj.cpp.o:
+	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/template_proj.dir/build.make mdwa_planning/CMakeFiles/template_proj.dir/src/template_proj.cpp.o
+.PHONY : src/template_proj.cpp.o
+
+src/template_proj.i: src/template_proj.cpp.i
+.PHONY : src/template_proj.i
+
+# target to preprocess a source file
+src/template_proj.cpp.i:
+	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/template_proj.dir/build.make mdwa_planning/CMakeFiles/template_proj.dir/src/template_proj.cpp.i
+.PHONY : src/template_proj.cpp.i
+
+src/template_proj.s: src/template_proj.cpp.s
+.PHONY : src/template_proj.s
+
+# target to generate assembly for a file
+src/template_proj.cpp.s:
+	cd /home/zch/planning_ros/build && $(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/template_proj.dir/build.make mdwa_planning/CMakeFiles/template_proj.dir/src/template_proj.cpp.s
+.PHONY : src/template_proj.cpp.s
 
 # Help Target
 help:
@@ -907,12 +993,22 @@ help:
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... airthread_field"
 	@echo "... avoid_planning"
+	@echo "... template_proj"
 	@echo "... src/airthread_field.o"
 	@echo "... src/airthread_field.i"
 	@echo "... src/airthread_field.s"
 	@echo "... src/avoid_planning.o"
 	@echo "... src/avoid_planning.i"
 	@echo "... src/avoid_planning.s"
+	@echo "... src/dwa.o"
+	@echo "... src/dwa.i"
+	@echo "... src/dwa.s"
+	@echo "... src/environment.o"
+	@echo "... src/environment.i"
+	@echo "... src/environment.s"
+	@echo "... src/template_proj.o"
+	@echo "... src/template_proj.i"
+	@echo "... src/template_proj.s"
 .PHONY : help
 
 

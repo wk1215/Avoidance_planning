@@ -143,6 +143,7 @@ gtest/googlemock/gtest/clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/c
 mdwa_planning/all: mdwa_planning/CMakeFiles/mdwa_planning_generate_messages.dir/all
 mdwa_planning/all: mdwa_planning/CMakeFiles/airthread_field.dir/all
 mdwa_planning/all: mdwa_planning/CMakeFiles/avoid_planning.dir/all
+mdwa_planning/all: mdwa_planning/CMakeFiles/template_proj.dir/all
 .PHONY : mdwa_planning/all
 
 # Recursive "preinstall" directory target.
@@ -195,6 +196,7 @@ mdwa_planning/clean: mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py
 mdwa_planning/clean: mdwa_planning/CMakeFiles/mdwa_planning_genpy.dir/clean
 mdwa_planning/clean: mdwa_planning/CMakeFiles/airthread_field.dir/clean
 mdwa_planning/clean: mdwa_planning/CMakeFiles/avoid_planning.dir/clean
+mdwa_planning/clean: mdwa_planning/CMakeFiles/template_proj.dir/clean
 .PHONY : mdwa_planning/clean
 
 #=============================================================================
@@ -383,7 +385,7 @@ CMakeFiles/doxygen.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=5,6,7 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=7,8,9 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -409,7 +411,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=8,9,10,11 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=10,11,12,13 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -435,7 +437,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=12,13 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=14,15 "Built target gtest"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -461,7 +463,7 @@ gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean:
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=14,15 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=16,17 "Built target gtest_main"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1351,7 +1353,7 @@ mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_cpp.dir/all: mdwa_plann
 mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_cpp.dir/all: mdwa_planning/CMakeFiles/_mdwa_planning_generate_messages_check_deps_threat_points.dir/all
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_cpp.dir/build.make mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_cpp.dir/build.make mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=16 "Built target mdwa_planning_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=18 "Built target mdwa_planning_generate_messages_cpp"
 .PHONY : mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1405,7 +1407,7 @@ mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_eus.dir/all: mdwa_plann
 mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_eus.dir/all: mdwa_planning/CMakeFiles/_mdwa_planning_generate_messages_check_deps_threat_points.dir/all
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_eus.dir/build.make mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_eus.dir/depend
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_eus.dir/build.make mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=17,18 "Built target mdwa_planning_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=19,20 "Built target mdwa_planning_generate_messages_eus"
 .PHONY : mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1459,7 +1461,7 @@ mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_lisp.dir/all: mdwa_plan
 mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_lisp.dir/all: mdwa_planning/CMakeFiles/_mdwa_planning_generate_messages_check_deps_threat_points.dir/all
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_lisp.dir/build.make mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_lisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_lisp.dir/build.make mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=19 "Built target mdwa_planning_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=21 "Built target mdwa_planning_generate_messages_lisp"
 .PHONY : mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1513,7 +1515,7 @@ mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_nodejs.dir/all: mdwa_pl
 mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_nodejs.dir/all: mdwa_planning/CMakeFiles/_mdwa_planning_generate_messages_check_deps_threat_points.dir/all
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_nodejs.dir/build.make mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_nodejs.dir/depend
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_nodejs.dir/build.make mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=20 "Built target mdwa_planning_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=22 "Built target mdwa_planning_generate_messages_nodejs"
 .PHONY : mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1567,7 +1569,7 @@ mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py.dir/all: mdwa_planni
 mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py.dir/all: mdwa_planning/CMakeFiles/_mdwa_planning_generate_messages_check_deps_threat_points.dir/all
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py.dir/build.make mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py.dir/build.make mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=21,22 "Built target mdwa_planning_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=23,24 "Built target mdwa_planning_generate_messages_py"
 .PHONY : mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1645,12 +1647,12 @@ mdwa_planning/CMakeFiles/airthread_field.dir/clean:
 mdwa_planning/CMakeFiles/avoid_planning.dir/all:
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/avoid_planning.dir/build.make mdwa_planning/CMakeFiles/avoid_planning.dir/depend
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/avoid_planning.dir/build.make mdwa_planning/CMakeFiles/avoid_planning.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=3,4 "Built target avoid_planning"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=3,4,5,6 "Built target avoid_planning"
 .PHONY : mdwa_planning/CMakeFiles/avoid_planning.dir/all
 
 # Build rule for subdir invocation for target.
 mdwa_planning/CMakeFiles/avoid_planning.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zch/planning_ros/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zch/planning_ros/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mdwa_planning/CMakeFiles/avoid_planning.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zch/planning_ros/build/CMakeFiles 0
 .PHONY : mdwa_planning/CMakeFiles/avoid_planning.dir/rule
@@ -1663,6 +1665,32 @@ avoid_planning: mdwa_planning/CMakeFiles/avoid_planning.dir/rule
 mdwa_planning/CMakeFiles/avoid_planning.dir/clean:
 	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/avoid_planning.dir/build.make mdwa_planning/CMakeFiles/avoid_planning.dir/clean
 .PHONY : mdwa_planning/CMakeFiles/avoid_planning.dir/clean
+
+#=============================================================================
+# Target rules for target mdwa_planning/CMakeFiles/template_proj.dir
+
+# All Build rule for target.
+mdwa_planning/CMakeFiles/template_proj.dir/all:
+	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/template_proj.dir/build.make mdwa_planning/CMakeFiles/template_proj.dir/depend
+	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/template_proj.dir/build.make mdwa_planning/CMakeFiles/template_proj.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=47,48 "Built target template_proj"
+.PHONY : mdwa_planning/CMakeFiles/template_proj.dir/all
+
+# Build rule for subdir invocation for target.
+mdwa_planning/CMakeFiles/template_proj.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zch/planning_ros/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mdwa_planning/CMakeFiles/template_proj.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zch/planning_ros/build/CMakeFiles 0
+.PHONY : mdwa_planning/CMakeFiles/template_proj.dir/rule
+
+# Convenience name for target.
+template_proj: mdwa_planning/CMakeFiles/template_proj.dir/rule
+.PHONY : template_proj
+
+# clean rule for target.
+mdwa_planning/CMakeFiles/template_proj.dir/clean:
+	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/template_proj.dir/build.make mdwa_planning/CMakeFiles/template_proj.dir/clean
+.PHONY : mdwa_planning/CMakeFiles/template_proj.dir/clean
 
 #=============================================================================
 # Target rules for target styx_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
@@ -1941,7 +1969,7 @@ styx_msgs/CMakeFiles/styx_msgs_generate_messages_cpp.dir/all: styx_msgs/CMakeFil
 styx_msgs/CMakeFiles/styx_msgs_generate_messages_cpp.dir/all: styx_msgs/CMakeFiles/_styx_msgs_generate_messages_check_deps_Lane.dir/all
 	$(MAKE) $(MAKESILENT) -f styx_msgs/CMakeFiles/styx_msgs_generate_messages_cpp.dir/build.make styx_msgs/CMakeFiles/styx_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f styx_msgs/CMakeFiles/styx_msgs_generate_messages_cpp.dir/build.make styx_msgs/CMakeFiles/styx_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=23,24,25,26 "Built target styx_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=25,26,27,28 "Built target styx_msgs_generate_messages_cpp"
 .PHONY : styx_msgs/CMakeFiles/styx_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1999,7 +2027,7 @@ styx_msgs/CMakeFiles/styx_msgs_generate_messages_eus.dir/all: styx_msgs/CMakeFil
 styx_msgs/CMakeFiles/styx_msgs_generate_messages_eus.dir/all: styx_msgs/CMakeFiles/_styx_msgs_generate_messages_check_deps_Lane.dir/all
 	$(MAKE) $(MAKESILENT) -f styx_msgs/CMakeFiles/styx_msgs_generate_messages_eus.dir/build.make styx_msgs/CMakeFiles/styx_msgs_generate_messages_eus.dir/depend
 	$(MAKE) $(MAKESILENT) -f styx_msgs/CMakeFiles/styx_msgs_generate_messages_eus.dir/build.make styx_msgs/CMakeFiles/styx_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=27,28,29,30,31 "Built target styx_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=29,30,31,32,33 "Built target styx_msgs_generate_messages_eus"
 .PHONY : styx_msgs/CMakeFiles/styx_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2057,7 +2085,7 @@ styx_msgs/CMakeFiles/styx_msgs_generate_messages_lisp.dir/all: styx_msgs/CMakeFi
 styx_msgs/CMakeFiles/styx_msgs_generate_messages_lisp.dir/all: styx_msgs/CMakeFiles/_styx_msgs_generate_messages_check_deps_Lane.dir/all
 	$(MAKE) $(MAKESILENT) -f styx_msgs/CMakeFiles/styx_msgs_generate_messages_lisp.dir/build.make styx_msgs/CMakeFiles/styx_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f styx_msgs/CMakeFiles/styx_msgs_generate_messages_lisp.dir/build.make styx_msgs/CMakeFiles/styx_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=32,33,34,35 "Built target styx_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=34,35,36,37 "Built target styx_msgs_generate_messages_lisp"
 .PHONY : styx_msgs/CMakeFiles/styx_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2115,7 +2143,7 @@ styx_msgs/CMakeFiles/styx_msgs_generate_messages_nodejs.dir/all: styx_msgs/CMake
 styx_msgs/CMakeFiles/styx_msgs_generate_messages_nodejs.dir/all: styx_msgs/CMakeFiles/_styx_msgs_generate_messages_check_deps_Lane.dir/all
 	$(MAKE) $(MAKESILENT) -f styx_msgs/CMakeFiles/styx_msgs_generate_messages_nodejs.dir/build.make styx_msgs/CMakeFiles/styx_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) $(MAKESILENT) -f styx_msgs/CMakeFiles/styx_msgs_generate_messages_nodejs.dir/build.make styx_msgs/CMakeFiles/styx_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=36,37,38,39 "Built target styx_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=38,39,40,41 "Built target styx_msgs_generate_messages_nodejs"
 .PHONY : styx_msgs/CMakeFiles/styx_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2173,7 +2201,7 @@ styx_msgs/CMakeFiles/styx_msgs_generate_messages_py.dir/all: styx_msgs/CMakeFile
 styx_msgs/CMakeFiles/styx_msgs_generate_messages_py.dir/all: styx_msgs/CMakeFiles/_styx_msgs_generate_messages_check_deps_Lane.dir/all
 	$(MAKE) $(MAKESILENT) -f styx_msgs/CMakeFiles/styx_msgs_generate_messages_py.dir/build.make styx_msgs/CMakeFiles/styx_msgs_generate_messages_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f styx_msgs/CMakeFiles/styx_msgs_generate_messages_py.dir/build.make styx_msgs/CMakeFiles/styx_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=40,41,42,43,44 "Built target styx_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=42,43,44,45,46 "Built target styx_msgs_generate_messages_py"
 .PHONY : styx_msgs/CMakeFiles/styx_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.

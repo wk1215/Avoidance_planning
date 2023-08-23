@@ -43,5 +43,20 @@
   "directory": "/home/zch/planning_ros/build/mdwa_planning",
   "command": "/usr/bin/c++ -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"mdwa_planning\\\" -I/home/zch/planning_ros/devel/include -I/home/zch/planning_ros/src/mdwa_planning/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -o CMakeFiles/avoid_planning.dir/src/avoid_planning.cpp.o -c /home/zch/planning_ros/src/mdwa_planning/src/avoid_planning.cpp",
   "file": "/home/zch/planning_ros/src/mdwa_planning/src/avoid_planning.cpp"
+},
+{
+  "directory": "/home/zch/planning_ros/build/mdwa_planning",
+  "command": "/usr/bin/c++ -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"mdwa_planning\\\" -I/home/zch/planning_ros/devel/include -I/home/zch/planning_ros/src/mdwa_planning/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -o CMakeFiles/avoid_planning.dir/src/dwa.cpp.o -c /home/zch/planning_ros/src/mdwa_planning/src/dwa.cpp",
+  "file": "/home/zch/planning_ros/src/mdwa_planning/src/dwa.cpp"
+},
+{
+  "directory": "/home/zch/planning_ros/build/mdwa_planning",
+  "command": "/usr/bin/c++ -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"mdwa_planning\\\" -I/home/zch/planning_ros/devel/include -I/home/zch/planning_ros/src/mdwa_planning/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -o CMakeFiles/avoid_planning.dir/src/environment.cpp.o -c /home/zch/planning_ros/src/mdwa_planning/src/environment.cpp",
+  "file": "/home/zch/planning_ros/src/mdwa_planning/src/environment.cpp"
+},
+{
+  "directory": "/home/zch/planning_ros/build/mdwa_planning",
+  "command": "/usr/bin/c++ -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"mdwa_planning\\\" -I/home/zch/planning_ros/devel/include -I/home/zch/planning_ros/src/mdwa_planning/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -o CMakeFiles/template_proj.dir/src/template_proj.cpp.o -c /home/zch/planning_ros/src/mdwa_planning/src/template_proj.cpp",
+  "file": "/home/zch/planning_ros/src/mdwa_planning/src/template_proj.cpp"
 }
 ]

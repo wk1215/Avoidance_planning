@@ -1,12 +1,14 @@
-#ifndef ENVIRONMENT_H
-#define ENVIRONMENT_H
+// #ifndef ENVIRONMENT_H
+// #define ENVIRONMENT_H
 
-#include <vector>
+#ifndef TEST_ENVIRONMENT_H
+#define TEST_ENVIRONMENT_H
+#include <vector> 
 
-struct QPointF
+struct PointF
 {
-    QPointF();
-    QPointF(double m_x,double m_y):x(m_x),y(m_y){};
+    PointF(){};
+    PointF(double m_x,double m_y):x(m_x),y(m_y){};
     double x;
     double y;
 };
@@ -15,7 +17,7 @@ class Environment
 {
 public:
     Environment();
-    std::vector<QPointF> barrier;
+    std::vector<PointF> barrier;
     float obs_size = 0.2;
 
 };

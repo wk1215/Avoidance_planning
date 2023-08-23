@@ -342,6 +342,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "mdwa_planning/CMakeFiles/mdwa_planning_genpy.dir/DependInfo.cmake"
   "mdwa_planning/CMakeFiles/airthread_field.dir/DependInfo.cmake"
   "mdwa_planning/CMakeFiles/avoid_planning.dir/DependInfo.cmake"
+  "mdwa_planning/CMakeFiles/template_proj.dir/DependInfo.cmake"
   "styx_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "styx_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "styx_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake"

@@ -874,6 +874,19 @@ avoid_planning/fast:
 .PHONY : avoid_planning/fast
 
 #=============================================================================
+# Target rules for targets named template_proj
+
+# Build rule for target.
+template_proj: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 template_proj
+.PHONY : template_proj
+
+# fast build rule for target.
+template_proj/fast:
+	$(MAKE) $(MAKESILENT) -f mdwa_planning/CMakeFiles/template_proj.dir/build.make mdwa_planning/CMakeFiles/template_proj.dir/build
+.PHONY : template_proj/fast
+
+#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -1220,6 +1233,7 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... template_proj"
 .PHONY : help
 
 

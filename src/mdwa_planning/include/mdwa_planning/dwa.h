@@ -1,11 +1,14 @@
-#ifndef DWA_H
-#define DWA_H
-
-#include "environment.h"
+// #ifndef DWA_H
+// #define DWA_H
+#ifndef TEST_DWA_H
+#define TEST_DWA_H
+#include "mdwa_planning/environment.h"
 #include <vector>
 #include <iostream>
 using namespace std;
 #define PI 3.1415926
+
+
 struct Car
 {
     float max_speed = 1.5;//10
@@ -41,7 +44,7 @@ class DWA
 {
 public:
     DWA();
-    DWA(Environment* env, QPointF start, QPointF destination);
+    DWA(Environment* env, PointF start, PointF destination);
     void planning();
     vector<float> dwa_control(const CarState &carstate);
     vector<float> calc_dw(const CarState &carstate);
@@ -52,8 +55,8 @@ public:
     float calc_obstacle_cost(const vector<CarState> &trajectory);
     Car car;
     vector<vector<CarState>> trajectory;
-    QPointF startPoint;
-    QPointF destinationPoint;
+    PointF startPoint;
+    PointF destinationPoint;
     CarState destinationState;
     Environment *environment;
     bool aaa = false;

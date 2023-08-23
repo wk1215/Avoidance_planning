@@ -1,27 +1,42 @@
-#include "dwa.h"
+#include "mdwa_planning/dwa.h"
 #include<math.h>
+
+
+// Environment::Environment()
+// {
+//     //barrier初始化
+//     barrier.push_back(PointF(20, 30));
+//     barrier.push_back(PointF(20, 35));
+//     barrier.push_back(PointF(25, 35));
+//     barrier.push_back(PointF(25, 30));
+//     barrier.push_back(PointF(27, 30));
+//     barrier.push_back(PointF(25, 25));
+//     barrier.push_back(PointF(22, 23));
+//     barrier.push_back(PointF(22, 23));
+//     barrier.push_back(PointF(25, 23));
+// }
 
 
 DWA::DWA()
 {
 
 }
-DWA::DWA(Environment* env, QPointF start, QPointF destination)
+DWA::DWA(Environment* env, PointF start, PointF destination)
 {
     startPoint = start;
     destinationPoint = destination;
     environment = env;
     destinationState.x = destination.x;
     destinationState.y = destination.y;
-    destinationState.x = 15;
-    destinationState.y = 10;
+    //destinationState.x = 15;
+    //destinationState.y = 10;
     destinationState.yaw = 0;
     destinationState.speed = 0;
     destinationState.angular_speed = 0;
 }
 //路径规划
 void DWA::planning()
-{
+{  
     CarState currentState(startPoint.x, startPoint.y, 0, 0, 0);
     vector<CarState> currentTrajectory;
     while(1)

@@ -83,14 +83,46 @@ mdwa_planning/CMakeFiles/avoid_planning.dir/src/avoid_planning.cpp.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/avoid_planning.dir/src/avoid_planning.cpp.s"
 	cd /home/zch/planning_ros/build/mdwa_planning && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zch/planning_ros/src/mdwa_planning/src/avoid_planning.cpp -o CMakeFiles/avoid_planning.dir/src/avoid_planning.cpp.s
 
+mdwa_planning/CMakeFiles/avoid_planning.dir/src/dwa.cpp.o: mdwa_planning/CMakeFiles/avoid_planning.dir/flags.make
+mdwa_planning/CMakeFiles/avoid_planning.dir/src/dwa.cpp.o: /home/zch/planning_ros/src/mdwa_planning/src/dwa.cpp
+mdwa_planning/CMakeFiles/avoid_planning.dir/src/dwa.cpp.o: mdwa_planning/CMakeFiles/avoid_planning.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object mdwa_planning/CMakeFiles/avoid_planning.dir/src/dwa.cpp.o"
+	cd /home/zch/planning_ros/build/mdwa_planning && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT mdwa_planning/CMakeFiles/avoid_planning.dir/src/dwa.cpp.o -MF CMakeFiles/avoid_planning.dir/src/dwa.cpp.o.d -o CMakeFiles/avoid_planning.dir/src/dwa.cpp.o -c /home/zch/planning_ros/src/mdwa_planning/src/dwa.cpp
+
+mdwa_planning/CMakeFiles/avoid_planning.dir/src/dwa.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/avoid_planning.dir/src/dwa.cpp.i"
+	cd /home/zch/planning_ros/build/mdwa_planning && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zch/planning_ros/src/mdwa_planning/src/dwa.cpp > CMakeFiles/avoid_planning.dir/src/dwa.cpp.i
+
+mdwa_planning/CMakeFiles/avoid_planning.dir/src/dwa.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/avoid_planning.dir/src/dwa.cpp.s"
+	cd /home/zch/planning_ros/build/mdwa_planning && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zch/planning_ros/src/mdwa_planning/src/dwa.cpp -o CMakeFiles/avoid_planning.dir/src/dwa.cpp.s
+
+mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.o: mdwa_planning/CMakeFiles/avoid_planning.dir/flags.make
+mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.o: /home/zch/planning_ros/src/mdwa_planning/src/environment.cpp
+mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.o: mdwa_planning/CMakeFiles/avoid_planning.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.o"
+	cd /home/zch/planning_ros/build/mdwa_planning && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.o -MF CMakeFiles/avoid_planning.dir/src/environment.cpp.o.d -o CMakeFiles/avoid_planning.dir/src/environment.cpp.o -c /home/zch/planning_ros/src/mdwa_planning/src/environment.cpp
+
+mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/avoid_planning.dir/src/environment.cpp.i"
+	cd /home/zch/planning_ros/build/mdwa_planning && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zch/planning_ros/src/mdwa_planning/src/environment.cpp > CMakeFiles/avoid_planning.dir/src/environment.cpp.i
+
+mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/avoid_planning.dir/src/environment.cpp.s"
+	cd /home/zch/planning_ros/build/mdwa_planning && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zch/planning_ros/src/mdwa_planning/src/environment.cpp -o CMakeFiles/avoid_planning.dir/src/environment.cpp.s
+
 # Object files for target avoid_planning
 avoid_planning_OBJECTS = \
-"CMakeFiles/avoid_planning.dir/src/avoid_planning.cpp.o"
+"CMakeFiles/avoid_planning.dir/src/avoid_planning.cpp.o" \
+"CMakeFiles/avoid_planning.dir/src/dwa.cpp.o" \
+"CMakeFiles/avoid_planning.dir/src/environment.cpp.o"
 
 # External object files for target avoid_planning
 avoid_planning_EXTERNAL_OBJECTS =
 
 /home/zch/planning_ros/devel/lib/mdwa_planning/avoid_planning: mdwa_planning/CMakeFiles/avoid_planning.dir/src/avoid_planning.cpp.o
+/home/zch/planning_ros/devel/lib/mdwa_planning/avoid_planning: mdwa_planning/CMakeFiles/avoid_planning.dir/src/dwa.cpp.o
+/home/zch/planning_ros/devel/lib/mdwa_planning/avoid_planning: mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.o
 /home/zch/planning_ros/devel/lib/mdwa_planning/avoid_planning: mdwa_planning/CMakeFiles/avoid_planning.dir/build.make
 /home/zch/planning_ros/devel/lib/mdwa_planning/avoid_planning: /opt/ros/melodic/lib/libroscpp.so
 /home/zch/planning_ros/devel/lib/mdwa_planning/avoid_planning: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -111,7 +143,7 @@ avoid_planning_EXTERNAL_OBJECTS =
 /home/zch/planning_ros/devel/lib/mdwa_planning/avoid_planning: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/zch/planning_ros/devel/lib/mdwa_planning/avoid_planning: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/zch/planning_ros/devel/lib/mdwa_planning/avoid_planning: mdwa_planning/CMakeFiles/avoid_planning.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/zch/planning_ros/devel/lib/mdwa_planning/avoid_planning"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zch/planning_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable /home/zch/planning_ros/devel/lib/mdwa_planning/avoid_planning"
 	cd /home/zch/planning_ros/build/mdwa_planning && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/avoid_planning.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
