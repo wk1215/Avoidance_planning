@@ -27,7 +27,7 @@ int main(int argc, char** argv)
 
   //init  impact_times 
   threat_msg.impact_times=1.5;
-  ros::Rate rate(30);
+  ros::Rate rate(10);
 
   while (ros::ok()) {
     // pub  meaaage

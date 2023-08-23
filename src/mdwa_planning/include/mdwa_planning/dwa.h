@@ -21,7 +21,7 @@ struct Car
     float v_resolution = 0.1;     // 速度采样分辨率
     float yaw_rate_resolution = 1.0;
     float dt = 0.1;                //运动学模型预测时间
-    float predict_time = 2.0;
+    float predict_time = 1.5;
     float goal_cost_gain = 0.2;
     float speed_cost_gain = 1.0;
     float obstacle_cost_gain = 1.0;

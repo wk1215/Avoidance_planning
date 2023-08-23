@@ -972,7 +972,9 @@ mdwa_planning/CMakeFiles/avoid_planning.dir/src/avoid_planning.cpp.o: \
  /opt/ros/melodic/include/geometry_msgs/Twist.h \
  /opt/ros/melodic/include/ros/message_operations.h \
  /opt/ros/melodic/include/geometry_msgs/Vector3.h \
+ /opt/ros/melodic/include/geometry_msgs/PointStamped.h \
+ /opt/ros/melodic/include/std_msgs/Header.h \
+ /opt/ros/melodic/include/geometry_msgs/Point.h \
  /home/zch/planning_ros/src/mdwa_planning/include/mdwa_planning/environment.h \
  /home/zch/planning_ros/devel/include/mdwa_planning/threat_points.h \
- /opt/ros/melodic/include/geometry_msgs/Point.h \
  /home/zch/planning_ros/src/mdwa_planning/include/mdwa_planning/dwa.h

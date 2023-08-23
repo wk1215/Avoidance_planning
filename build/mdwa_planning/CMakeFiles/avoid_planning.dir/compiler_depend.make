@@ -1092,9 +1092,11 @@ mdwa_planning/CMakeFiles/avoid_planning.dir/src/avoid_planning.cpp.o: /home/zch/
   /opt/ros/melodic/include/geometry_msgs/Twist.h \
   /opt/ros/melodic/include/ros/message_operations.h \
   /opt/ros/melodic/include/geometry_msgs/Vector3.h \
+  /opt/ros/melodic/include/geometry_msgs/PointStamped.h \
+  /opt/ros/melodic/include/std_msgs/Header.h \
+  /opt/ros/melodic/include/geometry_msgs/Point.h \
   /home/zch/planning_ros/src/mdwa_planning/include/mdwa_planning/environment.h \
   /home/zch/planning_ros/devel/include/mdwa_planning/threat_points.h \
-  /opt/ros/melodic/include/geometry_msgs/Point.h \
   /home/zch/planning_ros/src/mdwa_planning/include/mdwa_planning/dwa.h
 
 mdwa_planning/CMakeFiles/avoid_planning.dir/src/dwa.cpp.o: /home/zch/planning_ros/src/mdwa_planning/src/dwa.cpp \
@@ -1458,11 +1460,11 @@ mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.o: /home/zch/pla
 
 /home/zch/planning_ros/src/mdwa_planning/src/dwa.cpp:
 
-/opt/ros/melodic/include/geometry_msgs/Point.h:
-
 /home/zch/planning_ros/devel/include/mdwa_planning/threat_points.h:
 
 /home/zch/planning_ros/src/mdwa_planning/include/mdwa_planning/environment.h:
+
+/opt/ros/melodic/include/geometry_msgs/Point.h:
 
 /opt/ros/melodic/include/ros/message_operations.h:
 
@@ -2952,6 +2954,8 @@ mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.o: /home/zch/pla
 
 /usr/include/c++/7/bits/stl_construct.h:
 
+/opt/ros/melodic/include/geometry_msgs/PointStamped.h:
+
 /usr/include/boost/range/begin.hpp:
 
 /usr/include/boost/config/detail/select_platform_config.hpp:
@@ -3497,6 +3501,8 @@ mdwa_planning/CMakeFiles/avoid_planning.dir/src/environment.cpp.o: /home/zch/pla
 /usr/include/c++/7/bits/unique_ptr.h:
 
 /usr/include/boost/mpl/O1_size.hpp:
+
+/opt/ros/melodic/include/std_msgs/Header.h:
 
 /usr/include/boost/mpl/reverse_fold.hpp:
 
