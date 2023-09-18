@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/zch/planning_ros/devel/include/styx_msgs/Lane.h"
-  "/home/zch/planning_ros/devel/include/styx_msgs/TrafficLight.h"
-  "/home/zch/planning_ros/devel/include/styx_msgs/TrafficLightArray.h"
-  "/home/zch/planning_ros/devel/include/styx_msgs/Waypoint.h"
   "CMakeFiles/styx_msgs_generate_messages_cpp"
+  "/home/wk/planning_ros/devel/include/styx_msgs/TrafficLightArray.h"
+  "/home/wk/planning_ros/devel/include/styx_msgs/Waypoint.h"
+  "/home/wk/planning_ros/devel/include/styx_msgs/TrafficLight.h"
+  "/home/wk/planning_ros/devel/include/styx_msgs/Lane.h"
 )
 
 # Per-language clean rules from dependency scanning.

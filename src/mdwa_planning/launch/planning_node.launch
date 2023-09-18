@@ -1,0 +1,4 @@
+<launch>
+  <node name="local_path_planner" pkg="mdwa_planning" type="avoid_planning" />
+  <node name="plot_poses" pkg="mdwa_planning" type="path_record.py" />
+</launch>

@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/zch/planning_ros/devel/lib/mdwa_planning/template_proj"
-  "/home/zch/planning_ros/devel/lib/mdwa_planning/template_proj.pdb"
   "CMakeFiles/template_proj.dir/src/template_proj.cpp.o"
-  "CMakeFiles/template_proj.dir/src/template_proj.cpp.o.d"
+  "/home/wk/planning_ros/devel/lib/mdwa_planning/template_proj.pdb"
+  "/home/wk/planning_ros/devel/lib/mdwa_planning/template_proj"
 )
 
 # Per-language clean rules from dependency scanning.

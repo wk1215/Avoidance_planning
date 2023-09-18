@@ -7,4 +7,11 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/zch/planning_ros/build'
+export CMAKE_PREFIX_PATH="/home/wk/planning_ros/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/wk/planning_ros/devel/lib:$LD_LIBRARY_PATH"
+export PATH='/opt/ros/melodic/bin:/home/wk/.local/bin:/home/wk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+export PKG_CONFIG_PATH="/home/wk/planning_ros/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD='/home/wk/planning_ros/build'
+export PYTHONPATH="/home/wk/planning_ros/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/wk/planning_ros/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/zch/planning_ros/src:/home/wk/planning_ros/src:$ROS_PACKAGE_PATH"

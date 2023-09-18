@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/zch/planning_ros/devel/lib/mdwa_planning/airthread_field"
-  "/home/zch/planning_ros/devel/lib/mdwa_planning/airthread_field.pdb"
   "CMakeFiles/airthread_field.dir/src/airthread_field.cpp.o"
-  "CMakeFiles/airthread_field.dir/src/airthread_field.cpp.o.d"
+  "/home/wk/planning_ros/devel/lib/mdwa_planning/airthread_field.pdb"
+  "/home/wk/planning_ros/devel/lib/mdwa_planning/airthread_field"
 )
 
 # Per-language clean rules from dependency scanning.

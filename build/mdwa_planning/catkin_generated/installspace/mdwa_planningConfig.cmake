@@ -67,14 +67,14 @@ set(mdwa_planning_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(mdwa_planning_SOURCE_PREFIX /home/zch/planning_ros/src/mdwa_planning)
-  set(mdwa_planning_DEVEL_PREFIX /home/zch/planning_ros/devel)
+  set(mdwa_planning_SOURCE_PREFIX /home/wk/planning_ros/src/mdwa_planning)
+  set(mdwa_planning_DEVEL_PREFIX /home/wk/planning_ros/devel)
   set(mdwa_planning_INSTALL_PREFIX "")
   set(mdwa_planning_PREFIX ${mdwa_planning_DEVEL_PREFIX})
 else()
   set(mdwa_planning_SOURCE_PREFIX "")
   set(mdwa_planning_DEVEL_PREFIX "")
-  set(mdwa_planning_INSTALL_PREFIX /home/zch/planning_ros/install)
+  set(mdwa_planning_INSTALL_PREFIX /home/wk/planning_ros/install)
   set(mdwa_planning_PREFIX ${mdwa_planning_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/zch/planning_ros/install/lib;/home/zch/planning_ros/devel/lib;/home/zch/hybrid_a_star_ws/devel/lib;/home/zch/ackmcar_ws/devel/lib;/home/zch/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/wk/planning_ros/install/lib;/home/wk/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

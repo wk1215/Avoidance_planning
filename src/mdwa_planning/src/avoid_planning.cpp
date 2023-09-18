@@ -12,7 +12,7 @@ mdwa_planning::threat_points    air_thread; //存储空中威胁
 class LocalPathPlanner
 {
 public:
-    LocalPathPlanner()
+    LocalPathPlanner( ):env(env_index)
     {
         // init publisher and subscriber
         pub_cmd = nh_plan.advertise<geometry_msgs::Twist>("cmd_vel", 10);
@@ -48,23 +48,18 @@ public:
     void  planning()
     {
         CarState currentState(dwa->startPoint.x, dwa->startPoint.y, 0, 0, 0);
-        vector<CarState> currentTrajectory;
+        //vector<CarState> currentTrajectory;
         while(ros::ok)
         {
             //dwa algorithm
             vector<float> speed(2);     //v[0]为速度, v[1]角速度
             speed = dwa->dwa_control(currentState); 
-            currentTrajectory.clear();
-            dwa->aaa = false;
-            dwa->predict_trajectory(currentState, speed[0], speed[1], currentTrajectory);
-            dwa->aaa = false;
-            dwa->trajectory.push_back(currentTrajectory);
-            currentState = currentTrajectory.back();
+           currentState= dwa->motion_model(currentState,speed[0],speed[1]);
             geometry_msgs::Twist cmd_vel;
             float optimal_speed;
             float optimal_yaw_rate ;
         //判断是否到达终点
-            if(pow(currentState.x - dwa->destinationState.x, 2) + pow(currentState.y - dwa->destinationState.y, 2) <= dwa->car.radius * dwa->car.radius+1)
+            if(pow(currentState.x - dwa->destinationState.x, 2) + pow(currentState.y - dwa->destinationState.y, 2) <= dwa->car.radius * dwa->car.radius+0.1)
            {
                 optimal_speed =0;
                 optimal_yaw_rate = 0;
@@ -80,6 +75,7 @@ public:
              // pub message
             pub_cmd.publish(cmd_vel);
             ROS_INFO("cmd_vel : vx %.2f,  wz:  %0.2f", cmd_vel.linear.x , cmd_vel.angular.z);
+            ROS_INFO("obstacle : num%d", (int)env.barrier.size());
 
             geometry_msgs::PointStamped  this_point_stamped;
             this_point_stamped.point.x=currentState.x;
@@ -99,9 +95,10 @@ private:
     ros::Publisher pub_point;
     ros::Subscriber sub_air;
     ros::Rate loop_rate{ros::Rate(50)};
+    int  env_index=1;
     Environment  env;
-    PointF start{20, 10};         //起点
-    PointF destination{60,60};   // 终点
+    PointF start{0, 4*0.6};         //起点
+    PointF destination{8*0.6,3.2*0.6};   // 终点
     DWA *dwa;
 
 };

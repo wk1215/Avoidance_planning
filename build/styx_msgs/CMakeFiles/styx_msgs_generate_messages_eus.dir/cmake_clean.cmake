@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "/home/zch/planning_ros/devel/share/roseus/ros/styx_msgs/manifest.l"
-  "/home/zch/planning_ros/devel/share/roseus/ros/styx_msgs/msg/Lane.l"
-  "/home/zch/planning_ros/devel/share/roseus/ros/styx_msgs/msg/TrafficLight.l"
-  "/home/zch/planning_ros/devel/share/roseus/ros/styx_msgs/msg/TrafficLightArray.l"
-  "/home/zch/planning_ros/devel/share/roseus/ros/styx_msgs/msg/Waypoint.l"
   "CMakeFiles/styx_msgs_generate_messages_eus"
+  "/home/wk/planning_ros/devel/share/roseus/ros/styx_msgs/msg/TrafficLightArray.l"
+  "/home/wk/planning_ros/devel/share/roseus/ros/styx_msgs/msg/Waypoint.l"
+  "/home/wk/planning_ros/devel/share/roseus/ros/styx_msgs/msg/TrafficLight.l"
+  "/home/wk/planning_ros/devel/share/roseus/ros/styx_msgs/msg/Lane.l"
+  "/home/wk/planning_ros/devel/share/roseus/ros/styx_msgs/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

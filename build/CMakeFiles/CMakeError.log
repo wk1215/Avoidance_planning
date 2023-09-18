@@ -1,66 +1,55 @@
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/zch/planning_ros/build/CMakeFiles/CMakeScratch/TryCompile-v3CAxs
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/wk/planning_ros/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_964bd/fast && /usr/bin/make  -f CMakeFiles/cmTC_964bd.dir/build.make CMakeFiles/cmTC_964bd.dir/build
-make[1]: 进入目录“/home/zch/planning_ros/build/CMakeFiles/CMakeScratch/TryCompile-v3CAxs”
-Building C object CMakeFiles/cmTC_964bd.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_964bd.dir/src.c.o -c /home/zch/planning_ros/build/CMakeFiles/CMakeScratch/TryCompile-v3CAxs/src.c
-Linking C executable cmTC_964bd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_964bd.dir/link.txt --verbose=1
-/usr/bin/cc -rdynamic CMakeFiles/cmTC_964bd.dir/src.c.o -o cmTC_964bd 
-CMakeFiles/cmTC_964bd.dir/src.c.o：在函数‘main’中：
-src.c:(.text+0x3e)：对‘pthread_create’未定义的引用
-src.c:(.text+0x4a)：对‘pthread_detach’未定义的引用
-src.c:(.text+0x56)：对‘pthread_cancel’未定义的引用
-src.c:(.text+0x67)：对‘pthread_join’未定义的引用
-src.c:(.text+0x7b)：对‘pthread_atfork’未定义的引用
+Run Build Command:"/usr/bin/make" "cmTC_49ed6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_49ed6.dir/build.make CMakeFiles/cmTC_49ed6.dir/build
+make[1]: 进入目录“/home/wk/planning_ros/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_49ed6.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_49ed6.dir/CheckSymbolExists.c.o   -c /home/wk/planning_ros/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_49ed6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49ed6.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_49ed6.dir/CheckSymbolExists.c.o  -o cmTC_49ed6 
+CMakeFiles/cmTC_49ed6.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x1b)：对‘pthread_create’未定义的引用
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_964bd.dir/build.make:98: recipe for target 'cmTC_964bd' failed
-make[1]: *** [cmTC_964bd] Error 1
-make[1]: 离开目录“/home/zch/planning_ros/build/CMakeFiles/CMakeScratch/TryCompile-v3CAxs”
-Makefile:127: recipe for target 'cmTC_964bd/fast' failed
-make: *** [cmTC_964bd/fast] Error 2
+CMakeFiles/cmTC_49ed6.dir/build.make:97: recipe for target 'cmTC_49ed6' failed
+make[1]: *** [cmTC_49ed6] Error 1
+make[1]: 离开目录“/home/wk/planning_ros/build/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_49ed6/fast' failed
+make: *** [cmTC_49ed6/fast] Error 2
 
-
-Source file was:
+File /home/wk/planning_ros/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
 #include <pthread.h>
 
-static void* test_func(void* data)
+int main(int argc, char** argv)
 {
-  return data;
-}
-
-int main(void)
-{
-  pthread_t thread;
-  pthread_create(&thread, NULL, test_func, NULL);
-  pthread_detach(thread);
-  pthread_cancel(thread);
-  pthread_join(thread, NULL);
-  pthread_atfork(NULL, NULL, NULL);
-  pthread_exit(NULL);
-
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
   return 0;
+#endif
 }
-
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/zch/planning_ros/build/CMakeFiles/CMakeScratch/TryCompile-vRccEa
+Change Dir: /home/wk/planning_ros/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_0cf29/fast && /usr/bin/make  -f CMakeFiles/cmTC_0cf29.dir/build.make CMakeFiles/cmTC_0cf29.dir/build
-make[1]: 进入目录“/home/zch/planning_ros/build/CMakeFiles/CMakeScratch/TryCompile-vRccEa”
-Building C object CMakeFiles/cmTC_0cf29.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_0cf29.dir/CheckFunctionExists.c.o -c /home/zch/planning_ros/build/CMakeFiles/CMakeScratch/TryCompile-vRccEa/CheckFunctionExists.c
-Linking C executable cmTC_0cf29
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0cf29.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_0cf29.dir/CheckFunctionExists.c.o -o cmTC_0cf29  -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_9636d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9636d.dir/build.make CMakeFiles/cmTC_9636d.dir/build
+make[1]: 进入目录“/home/wk/planning_ros/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_9636d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9636d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9636d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9636d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_9636d.dir/CheckFunctionExists.c.o  -o cmTC_9636d -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_0cf29.dir/build.make:98: recipe for target 'cmTC_0cf29' failed
-make[1]: *** [cmTC_0cf29] Error 1
-make[1]: 离开目录“/home/zch/planning_ros/build/CMakeFiles/CMakeScratch/TryCompile-vRccEa”
-Makefile:127: recipe for target 'cmTC_0cf29/fast' failed
-make: *** [cmTC_0cf29/fast] Error 2
-
+CMakeFiles/cmTC_9636d.dir/build.make:97: recipe for target 'cmTC_9636d' failed
+make[1]: *** [cmTC_9636d] Error 1
+make[1]: 离开目录“/home/wk/planning_ros/build/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_9636d/fast' failed
+make: *** [cmTC_9636d/fast] Error 2
 
 

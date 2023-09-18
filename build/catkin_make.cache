@@ -1,2 +1,2 @@
 mdwa_planning:pure_persuit:styx_msgs
--DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCATKIN_DEVEL_PREFIX=/home/zch/planning_ros/devel -DCMAKE_INSTALL_PREFIX=/home/zch/planning_ros/install -G Unix Makefiles
+-DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCATKIN_DEVEL_PREFIX=/home/wk/planning_ros/devel -DCMAKE_INSTALL_PREFIX=/home/wk/planning_ros/install -G Unix Makefiles

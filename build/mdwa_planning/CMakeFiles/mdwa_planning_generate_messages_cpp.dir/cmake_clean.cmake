@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/zch/planning_ros/devel/include/mdwa_planning/threat_points.h"
   "CMakeFiles/mdwa_planning_generate_messages_cpp"
+  "/home/wk/planning_ros/devel/include/mdwa_planning/threat_points.h"
 )
 
 # Per-language clean rules from dependency scanning.

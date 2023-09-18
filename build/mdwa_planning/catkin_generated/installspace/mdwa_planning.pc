@@ -1,4 +1,4 @@
-prefix=/home/zch/planning_ros/install
+prefix=/home/wk/planning_ros/install
 
 Name: mdwa_planning
 Description: Description of mdwa_planning

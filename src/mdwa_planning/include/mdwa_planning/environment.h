@@ -17,8 +17,9 @@ class Environment
 {
 public:
     Environment();
+    Environment(int i);
     std::vector<PointF> barrier;
-    float obs_size = 0.2;
+    float obs_size = 0.1;
 
 };
 #endif // ENVIRONMENT_H

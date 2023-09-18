@@ -1,4 +1,4 @@
-prefix=/home/zch/planning_ros/install
+prefix=/home/wk/planning_ros/install
 
 Name: pure_persuit
 Description: Description of pure_persuit

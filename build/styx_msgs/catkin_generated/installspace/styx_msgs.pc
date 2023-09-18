@@ -1,4 +1,4 @@
-prefix=/home/zch/planning_ros/install
+prefix=/home/wk/planning_ros/install
 
 Name: styx_msgs
 Description: Description of styx_msgs

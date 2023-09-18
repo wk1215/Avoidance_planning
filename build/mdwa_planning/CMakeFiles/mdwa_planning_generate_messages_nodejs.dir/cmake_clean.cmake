@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/zch/planning_ros/devel/share/gennodejs/ros/mdwa_planning/msg/threat_points.js"
   "CMakeFiles/mdwa_planning_generate_messages_nodejs"
+  "/home/wk/planning_ros/devel/share/gennodejs/ros/mdwa_planning/msg/threat_points.js"
 )
 
 # Per-language clean rules from dependency scanning.

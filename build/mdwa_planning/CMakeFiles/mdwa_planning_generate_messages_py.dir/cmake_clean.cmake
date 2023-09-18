@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/zch/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/__init__.py"
-  "/home/zch/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_threat_points.py"
   "CMakeFiles/mdwa_planning_generate_messages_py"
+  "/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_threat_points.py"
+  "/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.
