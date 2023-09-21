@@ -12,7 +12,7 @@ mdwa_planning::threat_points    air_thread; //存储空中威胁
 class LocalPathPlanner
 {
 public:
-    LocalPathPlanner( ):env(env_index)
+    LocalPathPlanner(int env_index ):env(env_index)
     {
         // init publisher and subscriber
         pub_cmd = nh_plan.advertise<geometry_msgs::Twist>("cmd_vel", 10);
@@ -54,15 +54,20 @@ public:
             //dwa algorithm
             vector<float> speed(2);     //v[0]为速度, v[1]角速度
             speed = dwa->dwa_control(currentState); 
+            ROS_INFO("vel :  %.2f,wz: %0.2f", speed[0],speed[1]);
            currentState= dwa->motion_model(currentState,speed[0],speed[1]);
             geometry_msgs::Twist cmd_vel;
             float optimal_speed;
             float optimal_yaw_rate ;
         //判断是否到达终点
-            if(pow(currentState.x - dwa->destinationState.x, 2) + pow(currentState.y - dwa->destinationState.y, 2) <= dwa->car.radius * dwa->car.radius+0.1)
+            double dis=sqrt(pow(currentState.x - dwa->destinationState.x, 2) + pow(currentState.y - dwa->destinationState.y, 2)) ;
+            ROS_INFO("distance :  %.2f,", dis);
+            if(dis <= (dwa->car.radius +0.02))
            {
                 optimal_speed =0;
                 optimal_yaw_rate = 0;
+                ROS_INFO("Reached the goal!");
+                ros::shutdown();  
            }else
            {
                optimal_speed =speed[0];
@@ -75,7 +80,6 @@ public:
              // pub message
             pub_cmd.publish(cmd_vel);
             ROS_INFO("cmd_vel : vx %.2f,  wz:  %0.2f", cmd_vel.linear.x , cmd_vel.angular.z);
-            ROS_INFO("obstacle : num%d", (int)env.barrier.size());
 
             geometry_msgs::PointStamped  this_point_stamped;
             this_point_stamped.point.x=currentState.x;
@@ -95,10 +99,9 @@ private:
     ros::Publisher pub_point;
     ros::Subscriber sub_air;
     ros::Rate loop_rate{ros::Rate(50)};
-    int  env_index=1;
     Environment  env;
     PointF start{0, 4*0.6};         //起点
-    PointF destination{8*0.6,3.2*0.6};   // 终点
+    PointF destination{9*0.6,3*0.6};   // 终点
     DWA *dwa;
 
 };
@@ -106,7 +109,7 @@ private:
 int main(int argc, char** argv)
 {
     ros::init(argc, argv, "local_path_planner");
-    LocalPathPlanner local_path_planner;
+    LocalPathPlanner local_path_planner(1);
     local_path_planner.planning();
     return 0;
 }

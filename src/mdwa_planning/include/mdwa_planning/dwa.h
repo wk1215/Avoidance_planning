@@ -11,20 +11,20 @@ using namespace std;
 
 struct Car
 {
-    float max_speed = 0.4;//1.5;//10
-    float min_speed = 0.0;
+    float max_speed = 0.3;//1.5;//10
+    float min_speed = 0;
     //small car:1.82*v,car:0.24*v
-    float max_angular_speed = 200 ;// dec/s
-    float min_angular_speed = -200;
-    float max_accel = 30;//max=3.5
-    float max_angular_speed_rate = 200 ;
-    float v_resolution = 0.1;     // 速度采样分辨率
-    float yaw_rate_resolution = 1.0;
+    float max_angular_speed = 5 ;// dec/s
+    float min_angular_speed = -5;
+    float max_accel = 2;//max=3.5
+    float max_angular_speed_rate = 5 ;
+    float v_resolution = 0.05;     // 速度采样分辨率
+    float yaw_rate_resolution = 0.08;
     float dt = 0.1;                //运动学模型预测时间
-    float predict_time = 1.0;
-    float goal_cost_gain = 0.2;
-    float speed_cost_gain = 1.0;
-    float obstacle_cost_gain = 1.0;
+    float predict_time = 1;
+    float goal_cost_gain = 0.4;
+    float direct_cost_gain = 0.4;
+    float obstacle_cost_gain = 0.2;
     float radius =0.3;//max:2.2
 };
 struct CarState

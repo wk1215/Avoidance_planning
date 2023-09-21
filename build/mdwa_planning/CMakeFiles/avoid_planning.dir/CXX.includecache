@@ -55,6 +55,10 @@ mdwa_planning/dwa.h
 /home/wk/planning_ros/src/mdwa_planning/src/mdwa_planning/dwa.h
 math.h
 -
+stdlib.h
+-
+ros/ros.h
+-
 
 /home/wk/planning_ros/src/mdwa_planning/src/environment.cpp
 mdwa_planning/environment.h

@@ -21,9 +21,9 @@ Environment::Environment(int i)
     //1号地图，室内小场景
     if(i==1)
     {
-            barrier.push_back(PointF(2*0.6, 2*0.6));
-            barrier.push_back(PointF(5*0.6, 4*0.6));
-            barrier.push_back(PointF(6*0.6, 2*0.6));
+            barrier.push_back(PointF(2*0.6, 6*0.6));
+            barrier.push_back(PointF(5*0.6, 3.5*0.6));
+            barrier.push_back(PointF(6*0.6, 1*0.6));
     }
 }
 
