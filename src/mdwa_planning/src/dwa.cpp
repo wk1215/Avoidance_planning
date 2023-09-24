@@ -53,6 +53,7 @@ vector<float> DWA::dwa_control(const CarState &carstate)
     vector<float> dw(4);     //dw[0]为最小速度，dw[1]为最大速度，dw[2]为最小角速度，dw[3]为最大角速度
     //计算动态窗口
     dw = calc_dw(carstate);
+    ROS_INFO("dw[0] :  %.2f,dw[1]: %0.2f", dw[0],dw[1]);
     //计算最佳（v, w）
     vector<float> v_w(2);
     v_w = calc_best_speed(carstate, dw);
@@ -170,6 +171,17 @@ CarState DWA::motion_model(const CarState &carstate, const float &speed, const f
     nextState.x = carstate.x + speed * car.dt * cos(carstate.yaw);
     nextState.y = carstate.y + speed * car.dt * sin(carstate.yaw);
     nextState.yaw = carstate.yaw + angular_speed * car.dt;
+    nextState.speed = carstate.speed;
+    nextState.angular_speed = carstate.angular_speed;
+    return nextState;
+}
+//模拟里程计数据
+CarState DWA::motion_model_Odom(const CarState &carstate, const float &speed, const float &angular_speed)
+{
+    CarState nextState;
+    nextState.x = carstate.x + speed * 0.02* cos(carstate.yaw);
+    nextState.y = carstate.y + speed *0.02* sin(carstate.yaw);
+    nextState.yaw = carstate.yaw + angular_speed * 0.02;
     nextState.speed = carstate.speed;
     nextState.angular_speed = carstate.angular_speed;
     return nextState;

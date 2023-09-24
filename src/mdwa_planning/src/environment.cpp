@@ -24,6 +24,7 @@ Environment::Environment(int i)
             barrier.push_back(PointF(2*0.6, 6*0.6));
             barrier.push_back(PointF(5*0.6, 3.5*0.6));
             barrier.push_back(PointF(6*0.6, 1*0.6));
+            barrier.push_back(PointF(6*0.6, 4.5*0.6));
     }
 }
 

@@ -55,14 +55,14 @@ public:
             vector<float> speed(2);     //v[0]为速度, v[1]角速度
             speed = dwa->dwa_control(currentState); 
             ROS_INFO("vel :  %.2f,wz: %0.2f", speed[0],speed[1]);
-           currentState= dwa->motion_model(currentState,speed[0],speed[1]);
+           currentState= dwa->motion_model_Odom(currentState,speed[0],speed[1]);
             geometry_msgs::Twist cmd_vel;
             float optimal_speed;
             float optimal_yaw_rate ;
         //判断是否到达终点
             double dis=sqrt(pow(currentState.x - dwa->destinationState.x, 2) + pow(currentState.y - dwa->destinationState.y, 2)) ;
             ROS_INFO("distance :  %.2f,", dis);
-            if(dis <= (dwa->car.radius +0.02))
+            if(dis <= (0.01))
            {
                 optimal_speed =0;
                 optimal_yaw_rate = 0;
@@ -101,7 +101,7 @@ private:
     ros::Rate loop_rate{ros::Rate(50)};
     Environment  env;
     PointF start{0, 4*0.6};         //起点
-    PointF destination{9*0.6,3*0.6};   // 终点
+    PointF destination{8*0.6,3*0.6};   // 终点
     DWA *dwa;
 
 };
