@@ -62,7 +62,7 @@ public:
         //判断是否到达终点
             double dis=sqrt(pow(currentState.x - dwa->destinationState.x, 2) + pow(currentState.y - dwa->destinationState.y, 2)) ;
             ROS_INFO("distance :  %.2f,", dis);
-            if(dis <= (0.01))
+            if(dis <= (0.05))
            {
                 optimal_speed =0;
                 optimal_yaw_rate = 0;
@@ -95,8 +95,10 @@ public:
 
 private:
     ros::NodeHandle nh_plan;
+
     ros::Publisher pub_cmd;
     ros::Publisher pub_point;
+    
     ros::Subscriber sub_air;
     ros::Rate loop_rate{ros::Rate(50)};
     Environment  env;

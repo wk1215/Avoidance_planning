@@ -53,6 +53,9 @@ find_package(catkin REQUIRED COMPONENTS
  add_message_files(
    FILES
    threat_points.msg
+   Barrier.msg
+   Dy_Barrier.msg
+   Environment.msg
  )
 
 ## Generate services in the 'srv' folder

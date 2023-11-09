@@ -53,23 +53,49 @@ CMAKE_BINARY_DIR = /home/wk/planning_ros/build
 # Include the progress variables for this target.
 include mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py.dir/progress.make
 
+mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Dy_Barrier.py
+mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Environment.py
 mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_threat_points.py
+mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Barrier.py
 mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/__init__.py
 
+
+/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Dy_Barrier.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Dy_Barrier.py: /home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wk/planning_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG mdwa_planning/Dy_Barrier"
+	cd /home/wk/planning_ros/build/mdwa_planning && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg -Imdwa_planning:/home/wk/planning_ros/src/mdwa_planning/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p mdwa_planning -o /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg
+
+/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Environment.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Environment.py: /home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg
+/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Environment.py: /home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg
+/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Environment.py: /home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wk/planning_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG mdwa_planning/Environment"
+	cd /home/wk/planning_ros/build/mdwa_planning && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg -Imdwa_planning:/home/wk/planning_ros/src/mdwa_planning/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p mdwa_planning -o /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg
 
 /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_threat_points.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_threat_points.py: /home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg
 /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_threat_points.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wk/planning_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG mdwa_planning/threat_points"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wk/planning_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG mdwa_planning/threat_points"
 	cd /home/wk/planning_ros/build/mdwa_planning && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg -Imdwa_planning:/home/wk/planning_ros/src/mdwa_planning/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p mdwa_planning -o /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg
 
+/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Barrier.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Barrier.py: /home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wk/planning_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG mdwa_planning/Barrier"
+	cd /home/wk/planning_ros/build/mdwa_planning && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg -Imdwa_planning:/home/wk/planning_ros/src/mdwa_planning/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p mdwa_planning -o /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg
+
 /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/__init__.py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Dy_Barrier.py
+/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/__init__.py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Environment.py
 /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/__init__.py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_threat_points.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wk/planning_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for mdwa_planning"
+/home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/__init__.py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Barrier.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wk/planning_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for mdwa_planning"
 	cd /home/wk/planning_ros/build/mdwa_planning && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg --initpy
 
 mdwa_planning_generate_messages_py: mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py
+mdwa_planning_generate_messages_py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Dy_Barrier.py
+mdwa_planning_generate_messages_py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Environment.py
 mdwa_planning_generate_messages_py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_threat_points.py
+mdwa_planning_generate_messages_py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/_Barrier.py
 mdwa_planning_generate_messages_py: /home/wk/planning_ros/devel/lib/python2.7/dist-packages/mdwa_planning/msg/__init__.py
 mdwa_planning_generate_messages_py: mdwa_planning/CMakeFiles/mdwa_planning_generate_messages_py.dir/build.make
 

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "mdwa_planning: 1 messages, 0 services")
+message(STATUS "mdwa_planning: 4 messages, 0 services")
 
 set(MSG_I_FLAGS "-Imdwa_planning:/home/wk/planning_ros/src/mdwa_planning/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg")
 
@@ -17,9 +17,24 @@ add_custom_target(mdwa_planning_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg" NAME_WE)
+add_custom_target(_mdwa_planning_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mdwa_planning" "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg" ""
+)
+
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg" NAME_WE)
+add_custom_target(_mdwa_planning_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mdwa_planning" "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg" "mdwa_planning/Dy_Barrier:mdwa_planning/Barrier"
+)
+
 get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg" NAME_WE)
 add_custom_target(_mdwa_planning_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mdwa_planning" "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg" "geometry_msgs/Point"
+)
+
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg" NAME_WE)
+add_custom_target(_mdwa_planning_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mdwa_planning" "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg" ""
 )
 
 #
@@ -29,9 +44,27 @@ add_custom_target(_mdwa_planning_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_cpp(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg"
+  "${MSG_I_FLAGS}"
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg;/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_cpp(mdwa_planning
   "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_cpp(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mdwa_planning
 )
 
@@ -49,7 +82,13 @@ add_custom_target(mdwa_planning_generate_messages_cpp
 add_dependencies(mdwa_planning_generate_messages mdwa_planning_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_cpp _mdwa_planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_cpp _mdwa_planning_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_cpp _mdwa_planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg" NAME_WE)
 add_dependencies(mdwa_planning_generate_messages_cpp _mdwa_planning_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -62,9 +101,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS mdwa_planning_generate_messages_cpp
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_eus(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg"
+  "${MSG_I_FLAGS}"
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg;/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_eus(mdwa_planning
   "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_eus(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mdwa_planning
 )
 
@@ -82,7 +139,13 @@ add_custom_target(mdwa_planning_generate_messages_eus
 add_dependencies(mdwa_planning_generate_messages mdwa_planning_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_eus _mdwa_planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_eus _mdwa_planning_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_eus _mdwa_planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg" NAME_WE)
 add_dependencies(mdwa_planning_generate_messages_eus _mdwa_planning_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -95,9 +158,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS mdwa_planning_generate_messages_eus
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_lisp(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg"
+  "${MSG_I_FLAGS}"
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg;/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_lisp(mdwa_planning
   "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_lisp(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mdwa_planning
 )
 
@@ -115,7 +196,13 @@ add_custom_target(mdwa_planning_generate_messages_lisp
 add_dependencies(mdwa_planning_generate_messages mdwa_planning_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_lisp _mdwa_planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_lisp _mdwa_planning_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_lisp _mdwa_planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg" NAME_WE)
 add_dependencies(mdwa_planning_generate_messages_lisp _mdwa_planning_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -128,9 +215,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS mdwa_planning_generate_messages_lis
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_nodejs(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg"
+  "${MSG_I_FLAGS}"
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg;/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_nodejs(mdwa_planning
   "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_nodejs(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mdwa_planning
 )
 
@@ -148,7 +253,13 @@ add_custom_target(mdwa_planning_generate_messages_nodejs
 add_dependencies(mdwa_planning_generate_messages mdwa_planning_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_nodejs _mdwa_planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_nodejs _mdwa_planning_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_nodejs _mdwa_planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg" NAME_WE)
 add_dependencies(mdwa_planning_generate_messages_nodejs _mdwa_planning_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -161,9 +272,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS mdwa_planning_generate_messages_nod
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_py(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg"
+  "${MSG_I_FLAGS}"
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg;/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_py(mdwa_planning
   "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mdwa_planning
+)
+_generate_msg_py(mdwa_planning
+  "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mdwa_planning
 )
 
@@ -181,7 +310,13 @@ add_custom_target(mdwa_planning_generate_messages_py
 add_dependencies(mdwa_planning_generate_messages mdwa_planning_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_py _mdwa_planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_py _mdwa_planning_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg" NAME_WE)
+add_dependencies(mdwa_planning_generate_messages_py _mdwa_planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg" NAME_WE)
 add_dependencies(mdwa_planning_generate_messages_py _mdwa_planning_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

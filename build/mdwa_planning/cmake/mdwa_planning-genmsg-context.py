@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg"
+messages_str = "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg;/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg;/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg;/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg"
 services_str = ""
 pkg_name = "mdwa_planning"
 dependencies_str = "std_msgs;geometry_msgs"

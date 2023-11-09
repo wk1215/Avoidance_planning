@@ -21,10 +21,14 @@ Environment::Environment(int i)
     //1号地图，室内小场景
     if(i==1)
     {
+            //static obstacle
             barrier.push_back(PointF(2*0.6, 6*0.6));
             barrier.push_back(PointF(5*0.6, 3.5*0.6));
             barrier.push_back(PointF(6*0.6, 1*0.6));
             barrier.push_back(PointF(6*0.6, 4.5*0.6));
+           //dynamic obstacle
+            dy_obs.push_back(dy_PointF(2*0.6,5*0.6,0.2,-0.3));
+            dy_obs.push_back(dy_PointF(4*0.6,1*0.6,-0.1,0.3));
     }
 }
 

@@ -38,7 +38,12 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mdwa_planning/msg" TYPE FILE FILES "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mdwa_planning/msg" TYPE FILE FILES
+    "/home/wk/planning_ros/src/mdwa_planning/msg/threat_points.msg"
+    "/home/wk/planning_ros/src/mdwa_planning/msg/Barrier.msg"
+    "/home/wk/planning_ros/src/mdwa_planning/msg/Dy_Barrier.msg"
+    "/home/wk/planning_ros/src/mdwa_planning/msg/Environment.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
