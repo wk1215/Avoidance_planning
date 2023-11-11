@@ -9,7 +9,7 @@ DWA::DWA()
 {
 
 }
-DWA::DWA(Environment* env, PointF start, PointF destination)
+DWA::DWA(mdwa_planning::Environment* env, PointF start, PointF destination)
 {
     startPoint = start;
     destinationPoint = destination;
@@ -21,39 +21,39 @@ DWA::DWA(Environment* env, PointF start, PointF destination)
     destinationState.angular_speed = 0;
 }
 //路径规划
-void DWA::planning()
-{  
-    CarState currentState(startPoint.x, startPoint.y, -1, 0, 0);
-    vector<CarState> currentTrajectory;
-    while(1)
-    {
-        cout << "**********************************************" << endl;
-        vector<float> speed(2);     //v[0]为速度, v[1]角速度
-        speed = dwa_control(currentState);      
-        cout << "speed:" << speed[0] << ", " << speed[1] << endl;
-        currentTrajectory.clear();
-        aaa = false;
-        predict_trajectory(currentState, speed[0], speed[1], currentTrajectory);
-        aaa = false;
-        trajectory.push_back(currentTrajectory);
-        currentState = currentTrajectory.back();
-        //判断是否到达终点
-        if(pow(currentState.x - destinationState.x, 2) + pow(currentState.y - destinationState.y, 2) <= car.radius * car.radius+1)
-        {
-            cout << "Done" << endl;
-            break;
-        }
-        //cout << "currentState:(" << currentState.x << ", " << currentState.y << ", " << currentState.yaw * 180 / PI << ")" << currentState.speed << "  " << currentState.angular_speed << endl;
+// void DWA::planning()
+// {  
+//     CarState currentState(startPoint.x, startPoint.y, -1, 0, 0);
+//     vector<CarState> currentTrajectory;
+//     while(1)
+//     {
+//         cout << "**********************************************" << endl;
+//         vector<float> speed(2);     //v[0]为速度, v[1]角速度
+//         speed = dwa_control(currentState);      
+//         cout << "speed:" << speed[0] << ", " << speed[1] << endl;
+//         currentTrajectory.clear();
+//         aaa = false;
+//         predict_trajectory(currentState, speed[0], speed[1], currentTrajectory);
+//         aaa = false;
+//         trajectory.push_back(currentTrajectory);
+//         currentState = currentTrajectory.back();
+//         //判断是否到达终点
+//         if(pow(currentState.x - destinationState.x, 2) + pow(currentState.y - destinationState.y, 2) <= car.radius * car.radius+1)
+//         {
+//             cout << "Done" << endl;
+//             break;
+//         }
+//         //cout << "currentState:(" << currentState.x << ", " << currentState.y << ", " << currentState.yaw * 180 / PI << ")" << currentState.speed << "  " << currentState.angular_speed << endl;
         
-    }
-}
+//     }
+// }
 //动态窗口法
 vector<float> DWA::dwa_control(const CarState &carstate)
 {
     vector<float> dw(4);     //dw[0]为最小速度，dw[1]为最大速度，dw[2]为最小角速度，dw[3]为最大角速度
     //计算动态窗口
     dw = calc_dw(carstate);
-    ROS_INFO("dw[0] :  %.2f,dw[1]: %0.2f", dw[0],dw[1]);
+    // ROS_INFO("dw[0] :  %.2f,dw[1]: %0.2f", dw[0],dw[1]);
     //计算最佳（v, w）
     vector<float> v_w(2);
     v_w = calc_best_speed(carstate, dw);
@@ -85,12 +85,14 @@ vector<float> DWA::calc_best_speed(const CarState &carstate, const vector<float>
     float final_cost;
     float direct_cost;
     float goal_cost;
+    float dy_obstacle_cost;
     //float speed_cost = 0;
     float obstacle_cost = 0;
     vector<vector<float>>cost_set;
     float direct_cost_min=100,direct_cost_max=0;
     float goal_cost_min=100,goal_cost_max=0;
     float obstacle_cost_min=100,obstacle_cost_max=-10;
+    float dy_obstacle_cost_min=100,dy_obstacle_cost_max=-10;
     for(float i = dw[0]; i < dw[1]; i += car.v_resolution)
     {
         for (float j = dw[2]; j < dw[3]; j += car.yaw_rate_resolution)
@@ -104,11 +106,14 @@ vector<float> DWA::calc_best_speed(const CarState &carstate, const vector<float>
            // speed_cost = car.speed_cost_gain * (car.max_speed - trajectoryTmp.back().speed);
             goal_cost = sqrt(pow(destinationState.x - trajectoryTmp.back().x, 2) + pow(destinationState.y - trajectoryTmp.back().y, 2));//终点代价
             obstacle_cost = - calc_obstacle_cost(trajectoryTmp);
-            cost_set.push_back(vector<float>{direct_cost,goal_cost,obstacle_cost,i,j});
+            dy_obstacle_cost =-calc_dy_obstacle_cost(carstate,i,j);
+            // if(dy_obstacle_cost==0) continue;
+            cost_set.push_back(vector<float>{direct_cost,goal_cost,obstacle_cost,dy_obstacle_cost,i,j});
 
             direct_cost_min=min(direct_cost_min,direct_cost),direct_cost_max=max(direct_cost_max,direct_cost);
             goal_cost_min=min(goal_cost_min,goal_cost),goal_cost_max=max(goal_cost_max,goal_cost);
             obstacle_cost_min=min(obstacle_cost_min,obstacle_cost),obstacle_cost_max=max(obstacle_cost_max,obstacle_cost);
+            dy_obstacle_cost_min=min(dy_obstacle_cost_min,dy_obstacle_cost),dy_obstacle_cost_max=max(dy_obstacle_cost_max,dy_obstacle_cost);
         }
     }
     if(cost_set.size()==0)
@@ -128,20 +133,26 @@ vector<float> DWA::calc_best_speed(const CarState &carstate, const vector<float>
         if(goal_cost_min !=goal_cost_max)
         {
                cost_set[i][1]=(cost_set[i][1]-goal_cost_min)/(goal_cost_max-goal_cost_min);
-        }else  cost_set[i][1]=0;
+        }else  cost_set[i][1]=1;
 
         if(obstacle_cost_min!=obstacle_cost_max)
         {
             cost_set[i][2]=(cost_set[i][2]-obstacle_cost_min)/(obstacle_cost_max-obstacle_cost_min);
         }else  cost_set[i][2] = 1;
 
+        if(dy_obstacle_cost_min!=dy_obstacle_cost_max)
+        {
+            cost_set[i][3]=(cost_set[i][3]-dy_obstacle_cost_min)/(dy_obstacle_cost_max-dy_obstacle_cost_min);
+        }else  cost_set[i][3] = 1;
+
        // final_cost = cost_set[i][0]+fmin(cost_set[i][1] , - cost_set[i][2]);
-       final_cost = car.goal_cost_gain*cost_set[i][1] +car.obstacle_cost_gain*cost_set[i][2] ;
+       final_cost =  car.goal_cost_gain*cost_set[i][1] +car.obstacle_cost_gain*cost_set[i][2] +car.dy_obstacle_cost_gain*cost_set[i][3] ;
+    //    final_cost =  car.goal_cost_gain*cost_set[i][1] +car.obstacle_cost_gain*cost_set[i][2] +0*cost_set[i][3] ;
         if(final_cost <= min_cost)
          {
             min_cost = final_cost;
-            best_speed[0] = cost_set[i][3];
-            best_speed[1] = cost_set[i][4];
+            best_speed[0] = cost_set[i][4];
+            best_speed[1] = cost_set[i][5];
 
          }
     }
@@ -207,4 +218,47 @@ float DWA::calc_obstacle_cost(const vector<CarState> &trajectory)
                 return 0;
     }
     return distance;
+}
+
+//计算动态障碍物代价
+float DWA::calc_dy_obstacle_cost(const CarState &carstate,float v,float wz)
+{
+    float dis_min=10;
+    for(int i=0;i<environment->dy_obs.size();i++)
+    {
+    //动态障碍物运动状态
+    float vx_obs =environment->dy_obs[i].vx;
+    float vy_obs = environment->dy_obs[i].vy;
+    //车辆当前状态
+    float  theta = carstate.yaw;
+    float x = carstate.x;
+    float y =carstate.y;
+
+    //合成速度矢量和对应的模
+    vector<float> v_com{v*cos(theta)-vx_obs, v*sin(theta)-vy_obs}; 
+    float v_com_abs = sqrt(v_com[1]*v_com[1]+v_com[2]*v_com[2]);
+    float theta_com = atan2(v_com[2],v_com[1]);
+    float dis_safety = v_com_abs*car.predict_time+0.3;
+    //合成位置朝向矢量和对应的模
+    vector<double>obs_ori{environment->dy_obs[i].x-x , environment->dy_obs[i].y-y};
+    float obs_ori_abs = sqrt(obs_ori[1]*obs_ori[1]+obs_ori[2]*obs_ori[2]);
+
+    float cos_theta = (v_com[1]*obs_ori[1]+ v_com[2]*obs_ori[2])/(v_com_abs*obs_ori_abs);
+    if(cos_theta<=0.1 &&  obs_ori_abs>dis_safety)  continue;
+
+    float time = 0.0;
+    CarState cur_state(carstate.x,carstate.y,theta_com,v_com_abs,wz);
+    while (time <= car.predict_time)
+    {
+        time=time+car.dt; //时间更新
+        cur_state = motion_model(cur_state,v_com_abs,carstate.angular_speed);
+        float dis_cur = sqrt((cur_state.x-environment->dy_obs[i].x)*(cur_state.x-environment->dy_obs[i].x)+
+        (cur_state.y-environment->dy_obs[i].y)*(cur_state.y-environment->dy_obs[i].y));
+
+        if(dis_cur<=(0.3+environment->obs_size))
+            return  0 ;
+        dis_min = min(dis_min,dis_cur);
+    }
+}
+ return dis_min;
 }

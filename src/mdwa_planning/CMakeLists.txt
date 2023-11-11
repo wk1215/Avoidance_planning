@@ -139,8 +139,10 @@ include_directories(
 # add_executable(${PROJECT_NAME}_node src/mdwa_planning_node.cpp)
 #add_executable( helloworld src/helloworld.cpp )
 add_executable( airthread_field src/airthread_field.cpp )
-add_executable(avoid_planning  src/avoid_planning.cpp  src/dwa.cpp  src/environment.cpp )
-add_executable(template_proj src/template_proj.cpp)
+# add_executable(avoid_planning  src/avoid_planning.cpp  src/dwa.cpp  src/environment.cpp )
+# add_executable(template_proj src/template_proj.cpp)
+add_executable(environ_perception src/environ_perception.cpp)
+add_executable(local_planning  src/local_planning.cpp  src/dwa.cpp  )
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -154,9 +156,10 @@ add_executable(template_proj src/template_proj.cpp)
 ## Specify libraries to link a library or executable target against
 #target_link_libraries(  helloworld   ${catkin_LIBRARIES} )
 target_link_libraries(  airthread_field   ${catkin_LIBRARIES} )
-target_link_libraries(  avoid_planning    ${catkin_LIBRARIES} )
-target_link_libraries(  template_proj   ${catkin_LIBRARIES} )
-
+# target_link_libraries(  avoid_planning    ${catkin_LIBRARIES} )
+# target_link_libraries(  template_proj   ${catkin_LIBRARIES} )
+target_link_libraries(  environ_perception   ${catkin_LIBRARIES} )
+target_link_libraries(  local_planning   ${catkin_LIBRARIES} )
 #############
 ## Install ##
 #############

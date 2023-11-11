@@ -1,0 +1,5 @@
+<launch>
+  <node name="env_publisher" pkg="mdwa_planning" type="environ_perception" />
+  <node name="local_path_planner" pkg="mdwa_planning" type="local_planning" />
+  <node name="plot_poses" pkg="mdwa_planning" type="path_record.py" />
+</launch>

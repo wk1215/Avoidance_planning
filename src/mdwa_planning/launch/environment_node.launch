@@ -1,0 +1,4 @@
+<launch>
+  <node name="environ_perception" pkg="mdwa_planning" type="environ_perception" />
+  <node name="plot_poses" pkg="mdwa_planning" type="path_record.py" />
+</launch>

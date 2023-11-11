@@ -67,14 +67,14 @@ set(pure_persuit_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(pure_persuit_SOURCE_PREFIX /home/wk/planning_ros/src/pure_persuit)
-  set(pure_persuit_DEVEL_PREFIX /home/wk/planning_ros/devel)
+  set(pure_persuit_SOURCE_PREFIX /home/zch/planning_ros/src/pure_persuit)
+  set(pure_persuit_DEVEL_PREFIX /home/zch/planning_ros/devel)
   set(pure_persuit_INSTALL_PREFIX "")
   set(pure_persuit_PREFIX ${pure_persuit_DEVEL_PREFIX})
 else()
   set(pure_persuit_SOURCE_PREFIX "")
   set(pure_persuit_DEVEL_PREFIX "")
-  set(pure_persuit_INSTALL_PREFIX /home/wk/planning_ros/install)
+  set(pure_persuit_INSTALL_PREFIX /home/zch/planning_ros/install)
   set(pure_persuit_PREFIX ${pure_persuit_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/wk/planning_ros/install/lib;/home/wk/planning_ros/devel/lib;/home/wk/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/zch/planning_ros/install/lib;/home/zch/planning_ros/devel/lib;/home/zch/hybrid_a_star_ws/devel/lib;/home/zch/ackmcar_ws/devel/lib;/home/zch/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

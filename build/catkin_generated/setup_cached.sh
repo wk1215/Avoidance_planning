@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/wk/planning_ros/build'
+export PWD='/home/zch/planning_ros/build'

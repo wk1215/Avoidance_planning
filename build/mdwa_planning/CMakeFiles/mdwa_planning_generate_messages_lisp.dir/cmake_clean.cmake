@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
+  "/home/zch/planning_ros/devel/share/common-lisp/ros/mdwa_planning/msg/Barrier.lisp"
+  "/home/zch/planning_ros/devel/share/common-lisp/ros/mdwa_planning/msg/Dy_Barrier.lisp"
+  "/home/zch/planning_ros/devel/share/common-lisp/ros/mdwa_planning/msg/Environment.lisp"
+  "/home/zch/planning_ros/devel/share/common-lisp/ros/mdwa_planning/msg/threat_points.lisp"
   "CMakeFiles/mdwa_planning_generate_messages_lisp"
-  "/home/wk/planning_ros/devel/share/common-lisp/ros/mdwa_planning/msg/Dy_Barrier.lisp"
-  "/home/wk/planning_ros/devel/share/common-lisp/ros/mdwa_planning/msg/Environment.lisp"
-  "/home/wk/planning_ros/devel/share/common-lisp/ros/mdwa_planning/msg/threat_points.lisp"
-  "/home/wk/planning_ros/devel/share/common-lisp/ros/mdwa_planning/msg/Barrier.lisp"
 )
 
 # Per-language clean rules from dependency scanning.
